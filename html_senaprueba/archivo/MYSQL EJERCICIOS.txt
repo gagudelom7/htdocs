@@ -1,0 +1,348 @@
+Microsoft Windows [Versión 10.0.19041.1052]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+C:\Users\USER>cd c:/xampp/mysql/bin
+
+c:\xampp\mysql\bin>mysql -u Blessedman -h localhost -p
+Enter password: **********
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 12
+Server version: 10.1.38-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> create database citas
+    ->
+    -> create database citas;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'create database citas' at line 3
+MariaDB [(none)]> show databases;
++---------------------+
+| Database            |
++---------------------+
+| consultworksecurity |
+| control_yovel       |
+| curso_java_sql      |
+| decanus             |
+| drasandraherrera    |
+| employees           |
+| information_schema  |
+| instaburger         |
+| liferay             |
+| mysql               |
+| performance_schema  |
+| phpmyadmin          |
+| platziblog          |
+| proyecto_jsp        |
+| pruebas             |
+| redes               |
+| test                |
+| world               |
+| zainexpress         |
+| zehut               |
++---------------------+
+20 rows in set (0.06 sec)
+
+MariaDB [(none)]> create database citas;
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [(none)]> use citas;
+Database changed
+MariaDB [citas]> show databases;
++---------------------+
+| Database            |
++---------------------+
+| citas               |
+| consultworksecurity |
+| control_yovel       |
+| curso_java_sql      |
+| decanus             |
+| drasandraherrera    |
+| employees           |
+| information_schema  |
+| instaburger         |
+| liferay             |
+| mysql               |
+| performance_schema  |
+| phpmyadmin          |
+| platziblog          |
+| proyecto_jsp        |
+| pruebas             |
+| redes               |
+| test                |
+| world               |
+| zainexpress         |
+| zehut               |
++---------------------+
+21 rows in set (0.00 sec)
+
+MariaDB [citas]> create table medicos;
+ERROR 1113 (42000): A table must have at least 1 column
+MariaDB [citas]> create table Medicos(MedIdentificacion char(10) not null,
+    -> MedNombres varchar(50) not null,
+    -> MedApellidos varchar(50) not null,
+    -> primary key(MedIdentificacion)
+    -> );
+Query OK, 0 rows affected (0.03 sec)
+
+MariaDB [citas]> show tables from citas
+    -> ;
++-----------------+
+| Tables_in_citas |
++-----------------+
+| medicos         |
++-----------------+
+1 row in set (0.00 sec)
+
+MariaDB [citas]> describe medicos;
++-------------------+-------------+------+-----+---------+-------+
+| Field             | Type        | Null | Key | Default | Extra |
++-------------------+-------------+------+-----+---------+-------+
+| MedIdentificacion | char(10)    | NO   | PRI | NULL    |       |
+| MedNombres        | varchar(50) | NO   |     | NULL    |       |
+| MedApellidos      | varchar(50) | NO   |     | NULL    |       |
++-------------------+-------------+------+-----+---------+-------+
+3 rows in set (0.04 sec)
+
+MariaDB [citas]> create table Pacientes(PacIdentificacion char(10) not null,
+    -> PacNombres varchar(50) not null,
+    -> PacApellidos varchar(50) not null,
+    -> PacFechaNacimiento date not null,
+    -> PacSexo enum('M','F') not null,
+    -> primary key(PacIdentificacion)
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+MariaDB [citas]> show tables from citas
+    -> ;
++-----------------+
+| Tables_in_citas |
++-----------------+
+| medicos         |
+| pacientes       |
++-----------------+
+2 rows in set (0.00 sec)
+
+MariaDB [citas]> describe pacientes;
++--------------------+---------------+------+-----+---------+-------+
+| Field              | Type          | Null | Key | Default | Extra |
++--------------------+---------------+------+-----+---------+-------+
+| PacIdentificacion  | char(10)      | NO   | PRI | NULL    |       |
+| PacNombres         | varchar(50)   | NO   |     | NULL    |       |
+| PacApellidos       | varchar(50)   | NO   |     | NULL    |       |
+| PacFechaNacimiento | date          | NO   |     | NULL    |       |
+| PacSexo            | enum('M','F') | NO   |     | NULL    |       |
++--------------------+---------------+------+-----+---------+-------+
+5 rows in set (0.03 sec)
+
+MariaDB [citas]> create table Consultorios(ConNumero int(3) not null,
+    -> ConNombre varchar(50) not null,
+    -> primary key(ConNumero)
+    -> );
+Query OK, 0 rows affected (0.03 sec)
+
+MariaDB [citas]> show tables from citas
+    -> ;
++-----------------+
+| Tables_in_citas |
++-----------------+
+| consultorios    |
+| medicos         |
+| pacientes       |
++-----------------+
+3 rows in set (0.00 sec)
+
+MariaDB [citas]> describe consultarios;
+ERROR 1146 (42S02): Table 'citas.consultarios' doesn't exist
+MariaDB [citas]> describe consultorios;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| ConNumero | int(3)      | NO   | PRI | NULL    |       |
+| ConNombre | varchar(50) | NO   |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+2 rows in set (0.03 sec)
+
+MariaDB [citas]> create table Citas(
+    -> CitNumero int Auto_Increment,
+    -> CitFecha date not null,
+    -> CitHora varchar(10) not null,
+    -> CitPaciente char(10) not null,
+    -> CitMedico char(10) not null,
+    -> CintConsultorio int(3) not null,
+    -> CitEstado enum('Asignada','Cumplida') not null default 'Asignada',
+    -> primary key(CitNumero),
+    -> foreign key(CitPaciente) references pacientes (PacIdentificacion),
+    -> foreign key(CitMedico) references medicos(MedIdentificacion),
+    -> foreign key(CitConsultorio) references consultorios(ConNumero)
+    -> );
+ERROR 1072 (42000): Key column 'CitConsultorio' doesn't exist in table
+MariaDB [citas]> create table Citas(
+    -> CitNumero int auto_increment,
+    -> CitFecha date not null,
+    -> CitHora varchar(10) not null,
+    -> CitPaciente char(10) not null,
+    -> CitMedico char(10) not null,
+    -> CitConsultorio int(3) not null,
+    -> CitEstado enum('Asignada','Cumplida') not null default 'Asignada',
+    -> primary key(CitNumero),
+    -> foreign key(CitPaciente) references pacientes (PacIdentificacion),
+    -> foreign key(CitMedico) references medicos(MedIdentificacion),
+    -> foreign key(CitConsultorio) references consultorios(ConNumero)
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+MariaDB [citas]> show table citas from citas
+    -> ;
+
+MariaDB [citas]> show tables from citas;
++-----------------+
+| Tables_in_citas |
++-----------------+
+| citas           |
+| consultorios    |
+| medicos         |
+| pacientes       |
++-----------------+
+4 rows in set (0.00 sec)
+
+MariaDB [citas]> describe citas;
++----------------+-----------------------------+------+-----+----------+----------------+
+| Field          | Type                        | Null | Key | Default  | Extra          |
++----------------+-----------------------------+------+-----+----------+----------------+
+| CitNumero      | int(11)                     | NO   | PRI | NULL     | auto_increment |
+| CitFecha       | date                        | NO   |     | NULL     |                |
+| CitHora        | varchar(10)                 | NO   |     | NULL     |                |
+| CitPaciente    | char(10)                    | NO   | MUL | NULL     |                |
+| CitMedico      | char(10)                    | NO   | MUL | NULL     |                |
+| CitConsultorio | int(3)                      | NO   | MUL | NULL     |                |
+| CitEstado      | enum('Asignada','Cumplida') | NO   |     | Asignada |                |
++----------------+-----------------------------+------+-----+----------+----------------+
+7 rows in set (0.04 sec)
+
+MySQL> show tables from citas' at line 1
+MariaDB [citas]> show tables from citas;
++-----------------+
+| Tables_in_citas |
++-----------------+
+| citas           |
+| consultorios    |
+| medicos         |
+| pacientes       |
++-----------------+
+4 rows in set (0.00 sec)
+
+MariaDB [citas]> create table Tratamientos(
+    -> TraNumero int(11) not null,
+    -> TraFechaAsignado date not null,
+    -> Descripcion text not null,
+    -> TraFechaInicio date not null,
+    -> TraFechaFin date not null,
+    -> TraObservaciones text not null,
+    -> TraPaciente char(10) not null,
+    -> primary key(TraNumero),
+    -> key TraPaciente (TraPaciente),
+    -> foreign key (TraPaciente) references Pacientes(PacIdentificacion)
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+MariaDB [citas]> describe Tratamientos;
++------------------+----------+------+-----+---------+-------+
+| Field            | Type     | Null | Key | Default | Extra |
++------------------+----------+------+-----+---------+-------+
+| TraNumero        | int(11)  | NO   | PRI | NULL    |       |
+| TraFechaAsignado | date     | NO   |     | NULL    |       |
+| Descripcion      | text     | NO   |     | NULL    |       |
+| TraFechaInicio   | date     | NO   |     | NULL    |       |
+| TraFechaFin      | date     | NO   |     | NULL    |       |
+| TraObservaciones | text     | NO   |     | NULL    |       |
+| TraPaciente      | char(10) | NO   | MUL | NULL    |       |
++------------------+----------+------+-----+---------+-------+
+7 rows in set (0.04 sec)
+
+MariaDB [citas]> alter table tratamientos modify TraNumero int(11) not null auto_increment;
+Query OK, 0 rows affected (0.09 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [citas]> describe tratamientos;
++------------------+----------+------+-----+---------+----------------+
+| Field            | Type     | Null | Key | Default | Extra          |
++------------------+----------+------+-----+---------+----------------+
+| TraNumero        | int(11)  | NO   | PRI | NULL    | auto_increment |
+| TraFechaAsignado | date     | NO   |     | NULL    |                |
+| Descripcion      | text     | NO   |     | NULL    |                |
+| TraFechaInicio   | date     | NO   |     | NULL    |                |
+| TraFechaFin      | date     | NO   |     | NULL    |                |
+| TraObservaciones | text     | NO   |     | NULL    |                |
+| TraPaciente      | char(10) | NO   | MUL | NULL    |                |
++------------------+----------+------+-----+---------+----------------+
+7 rows in set (0.03 sec)
+
+
+MariaDB [citas]> ALTER TABLE tratamientos CHANGE COLUMN Descripcion TraDescripcion text not null;
+Query OK, 0 rows affected (0.10 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [citas]> alter table tratamientos add TraTemporal varchar(10) after TraObservaciones;
+Query OK, 0 rows affected (0.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [citas]> describe tratamientos;
++------------------+-------------+------+-----+---------+----------------+
+| Field            | Type        | Null | Key | Default | Extra          |
++------------------+-------------+------+-----+---------+----------------+
+| TraNumero        | int(11)     | NO   | PRI | NULL    | auto_increment |
+| TraFechaAsignado | date        | NO   |     | NULL    |                |
+| TraDescripcion   | varchar(20) | NO   |     | NULL    |                |
+| TraFechaInicio   | date        | NO   |     | NULL    |                |
+| TraFechaFin      | date        | NO   |     | NULL    |                |
+| TraObservaciones | text        | NO   |     | NULL    |                |
+| TraTemporal      | varchar(10) | YES  |     | NULL    |                |
+| TraPaciente      | char(10)    | NO   | MUL | NULL    |                |
++------------------+-------------+------+-----+---------+----------------+
+8 rows in set (0.04 sec)
+
+MariaDB [citas]> alter table Tratamientos drop TraTemporal;
+Query OK, 0 rows affected (0.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [citas]> describe Tratamientos;
++------------------+-------------+------+-----+---------+----------------+
+| Field            | Type        | Null | Key | Default | Extra          |
++------------------+-------------+------+-----+---------+----------------+
+| TraNumero        | int(11)     | NO   | PRI | NULL    | auto_increment |
+| TraFechaAsignado | date        | NO   |     | NULL    |                |
+| TraDescripcion   | varchar(20) | NO   |     | NULL    |                |
+| TraFechaInicio   | date        | NO   |     | NULL    |                |
+| TraFechaFin      | date        | NO   |     | NULL    |                |
+| TraObservaciones | text        | NO   |     | NULL    |                |
+| TraPaciente      | char(10)    | NO   | MUL | NULL    |                |
++------------------+-------------+------+-----+---------+----------------+
+7 rows in set (0.03 sec)
+
+MariaDB [citas]> alter table Tratamientos modify column TraFechaInicio date not null;
+Query OK, 0 rows affected (0.07 sec)
+
+alter table Tratamientos add column TraFechaFin date not null after TraObservaciones;
+
+MariaDB [citas]> select PacNombres as Nombre, PacApellidos as Apellido, PacSexo as Sexo from pacientes where PacSexo='M';
++-----------+--------------+------+
+| Nombre    | Apellido     | Sexo |
++-----------+--------------+------+
+| Sorobabel | cafaromañola | M    |
+| Giovanny  | Blessedman   | M    |
++-----------+--------------+------+
+2 rows in set (0.00 sec)
+
+MariaDB [citas]> select a.PacNombres, a.PacApellidos,
+    -> b.TraDescripcion, b.traObservaciones
+    -> from pacientes a join tratamientos b on
+    -> a.PacIdentificacion = b.TraPaciente;
++------------+--------------+---------------------------+------------------------+
+| PacNombres | PacApellidos | TraDescripcion            | traObservaciones       |
++------------+--------------+---------------------------+------------------------+
+| Yenny      | Castro       | viajera en el tiempo      | Descanso y Bendicion   |
+| Giovanny   | Blessedman   | Soy libre financieramente | Afortunado y Bendecido |
++------------+--------------+---------------------------+------------------------+
+2 rows in set (0.00 sec)

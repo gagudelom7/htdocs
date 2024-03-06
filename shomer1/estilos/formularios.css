@@ -1,0 +1,270 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background: #E5E5E5;
+}
+
+.logo{
+    width: 15%;
+    height: 50%;
+}
+
+/* Declaramos el contenedor el cual separa las secciones de la pagina */
+.contenedor1{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0;
+}
+
+/* Declaramos los estilos de los textos del banner inicial */
+.head1{
+    text-align: center;
+    padding:0;
+    margin-top: 0px;
+    height: 100%;
+    display: flex; /*para que los textos se Posicionen vertical y horizontal al centro */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+/* Declaramos los estilos de la etiquete H1 ubicado en el banner principal*/
+.titulo1{
+    margin-top: 90PX;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+
+/* Declaramos el contenedor el cual separa las secciones de la pagina de Mensajeria */
+.contenedor2{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0;
+}
+
+/* Declaramos los estilos de los textos del banner inicial de la pagina de Mensajeria*/
+.head2{
+    text-align: center;
+    padding:0;
+    margin-top: 0px;
+    height: 100%;
+    display: flex; /*para que los textos se Posicionen vertical y horizontal al centro */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+/* Declaramos los estilos de la etiquete H1 ubicado en el banner principal de la pagina de Mensajeria*/
+.titulo2{
+    margin-top: 90PX;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.formulario2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 5px;
+	margin-top: -35px;
+}
+
+
+.logo{
+    width: 15%;
+    height: 25%;
+	margin-bottom: -50px;
+}
+
+.logo2{
+    width: 15%;
+    height: 25%;
+}
+
+.logo3{
+    width: 9%;  /*8*/
+    height: 18%; /*15*/
+	float: left;
+	margin-left: 50px;
+	margin-right: -100px;
+	margin-top: 10px;
+}
+
+/* Declaramos los estilos de la etiqueta p ubicado en el banner principal*/
+.copy1{
+    font-weight: 300;
+    font-size: 15px;
+    margin-bottom: 1px;
+}
+
+main {
+	max-width: 800px;
+	width: 90%;
+	margin: auto;
+	padding: 40px;
+    margin-top: 10px;
+}
+
+.formulario {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 5px;
+    
+}
+
+.formulario__label {
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.formulario__grupo-input {
+	position: relative;
+}
+
+.formulario__input {
+	width: 100%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+}
+
+.formulario__input:focus {
+	border: 3px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+.formulario__input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.formulario__input-error-activo {
+	display: block;
+}
+
+.formulario__validacion-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+
+.formulario__checkbox {
+	margin-right: 10px;
+}
+
+.formulario__grupo-terminos, 
+.formulario__mensaje,
+.formulario__grupo-btn-enviar,
+.formulario__grupo-btn-borrar,
+.formulario__grupo-btn-regresar {
+	grid-column: span 3;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.formulario__mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.formulario__mensaje-activo {
+	display: block;
+}
+
+.formulario__mensaje p {
+	margin: 0;
+}
+
+.formulario__grupo-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.formulario__btn {
+    margin-top: 20px;
+	height: 45px;
+	line-height: 45px;
+	width: 30%;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1s ease all;
+}
+
+.formulario__btn:hover {
+	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+}
+
+.formulario__mensaje-exito {
+	font-size: 14px;
+	color: #119200;
+	display: none;
+}
+
+.formulario__mensaje-exito-activo {
+	display: block;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+	border: 3px solid #bb2929;
+}
+
+
+/* ----- -----  Mediaqueries ----- ----- */
+@media screen and (max-width: 800px) {
+	.formulario {
+		grid-template-columns: 1fr;
+	}
+
+	.formulario__grupo-terminos, 
+	.formulario__mensaje,
+	.formulario__grupo-btn-enviar {
+		grid-column: 1;
+	}
+
+	.formulario__btn {
+		width: 100%;
+	}
+}

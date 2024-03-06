@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitante SHOMER-1</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="estilos/formularios.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Menu Navegacion del sistema  -->
+
+    <header class="header" id="inicio">
+        <img src="imagen/burger.svg" alt="" class="burger">
+        <img src="imagen/logoshomer.gif" alt="" class="logo3">
+        <nav class="menu-navegacion">
+            <a href="index.html">inicio</a>
+            <a href="mensajeria.html">Mensajeria</a>
+            <a href="administrador.html">Administrador</a>
+            <a href="login.html">Salir</a>
+            <a href="help.html">Ayuda</a>
+        </nav>
+
+        <!-- Contenedor Principal del sistema -->
+        <div class="contenedor2 head2">
+            
+            <h1 class="titulo2">Formulario de Registro de Usuarios Visitantes</h1>
+            <!-- <img src="imagen/logoshomer.gif" alt="" class="logo2"> -->
+
+
+                   <!-- INICIO DE Formulario -->
+
+        <main>
+            <form action="" class="formulario2 row" id="formulario2">
+              
+                <!-- Grupo: nomvisitante -->
+                <div class="formulario__grupo" id="grupo__nomvisitante">
+                    <label for="nomvisitante" class="formulario__label"></label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="nomvisitante" id="nomvisitante" placeholder="NOMBRE">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <!-- <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p> -->
+                </div>
+
+                <!-- Grupo: apelvisitante -->
+                <div class="formulario__grupo" id="grupo__apelvisitante">
+                   <label for="apelvisitante" class="formulario__label"></label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="apelvisitante" id="apelvisitante" placeholder="APELLIDO">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <!-- <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p> -->
+                </div>
+
+                <!-- Grupo: codtipo -->
+                <div class="formulario__grupo" id="grupo__codtipo">
+                    <label for="codtipo" class="formulario__label"></label>
+                     <div class="formulario__grupo-input">
+                         <select type="text" class="formulario__input" name="codtipo" id="codtipo">
+                            <option disabled selected>TIPO ID</option> 
+                            <option value="CEDULA CIUDADANIA">CEDULA CIUDADANIA</option>
+                             <option value="CEDULA EXTRANJERIA">CEDULA EXTRANJERIA</option>
+                             <option value="TARJETA IDENTIDAD">TARJETA IDENTIDAD</option>
+                             <option value="NIT">NIT</option>
+                         </select>
+                    </div>
+                     <!-- <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p> -->
+                 </div>
+    
+                  <!-- Grupo: numidentidad -->
+                <div class="formulario__grupo" id="grupo__numidentidad">
+                    <label for="numidentidad" class="formulario__label"></label>
+                     <div class="formulario__grupo-input">
+                         <input type="text" class="formulario__input" name="numidentidad" id="numidentidad" placeholder="NUMERO IDENTIDAD">
+                         <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                     </div>
+                     <!-- <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p> -->
+                 </div>
+
+                  <!-- Grupo: movilvisitante -->
+                <div class="formulario__grupo" id="grupo__movilvisitante">
+                    <!--  <label for="telefono" class="formulario__label">Teléfono</label> -->
+                    <label for="movilvisitante" class="formulario__label"></label>
+                     <div class="formulario__grupo-input">
+                         <input type="text" class="formulario__input" name="movilvisitante" id="movilvisitante" placeholder="TELEFONO MOVIL">
+                         <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                     </div>
+                     <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+                 </div>
+
+                  <!-- Grupo: emailvisitante -->
+                <div class="formulario__grupo" id="grupo__emailvisitante">
+                    <!--  <label for="correo" class="formulario__label">Correo Electrónico</label> -->
+                    <label for="emailvisitante" class="formulario__label"></label>
+                     <div class="formulario__grupo-input">
+                         <input type="email" class="formulario__input" name="emailvisitante" id="emailvisitante" placeholder="@ EMAIL">
+                         <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                     </div>
+                     <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+                 </div>
+
+                   <!-- Grupo: codfuncionario -->
+                <div class="formulario__grupo" id="grupo__codfuncionario">
+                    <label for="codfuncionario" class="formulario__label"></label>
+                     <div class="formulario__grupo-input">
+                         <input type="text" class="formulario__input" name="codfuncionario" id="codfuncionario" placeholder="CODIGO FUNCIONARIO">
+                         <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                     </div>
+                     <!-- <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p> -->
+                 </div>
+
+
+                   <!-- Grupo: codarl -->
+                <div class="formulario__grupo" id="grupo__codarl">
+                    <!--  <label for="correo" class="formulario__label">RH</label> -->
+                    <label for="rh" class="formulario__label"></label>
+                     <div class="formulario__grupo-input">
+                        <select type="text" class="formulario__input" name="codarl" id="codarl">
+                            <option disabled selected>ARL</option> 
+                            <option value="SURA">SURA</option>
+                             <option value="POSITIVA">POSITIVA</option>
+                             <option value="COLPATRIA">COLPATRIA</option>
+                             <option value="COLMENA">COLMENA</option>
+                             <option value="BOLIVAR">BOLIVAR</option>
+                             <option value="LIBERTY">LIBERTY</option>
+                         </select>
+                     </div>
+                   <!--   <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p> -->
+                 </div>
+
+                   <!-- Grupo: codrh -->
+                <div class="formulario__grupo" id="grupo__codrh">
+                    <!--  <label for="correo" class="formulario__label">RH</label> -->
+                    <label for="codrh" class="formulario__label"></label>
+                     <div class="formulario__grupo-input">
+                        <select type="text" class="formulario__input" name="codrh" id="codrh">
+                            <option disabled selected>GRUPO SANGUINEO</option> 
+                            <option value="O POSITIVO">O POSITIVO</option>
+                             <option value="O NEGATIVO">O NEGATIVO</option>
+                             <option value="B POSITIVO">B POSITIVO</option>
+                             <option value="B NEGATIVO">B NEGATIVO</option>
+                             <option value="AB POSITIVO">AB POSITIVO</option>
+                             <option value="AB NEGATIVO">AB NEGATIVO</option>
+                         </select>
+                     </div>
+                   <!--   <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p> -->
+                 </div>
+
+                   <!-- Grupo: codobservavis -->
+                <div class="formulario__grupo" id="grupo__codobservavis">
+                    <!--  <label for="correo" class="formulario__label">RH</label> -->
+                    <label for="codobservavis" class="formulario__label"></label>
+                     <div class="formulario__grupo-input">
+                         <input type="text" class="formulario__input" name="codobservavis" id="codobservavis" placeholder="OBSERVACIONES">
+                         <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                     </div>
+                   <!--   <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p> -->
+                 </div>
+
+                   <!-- Grupo: codaparatos -->
+                <div class="formulario__grupo" id="grupo__codaparatos">
+                    <!--  <label for="correo" class="formulario__label">RH</label> -->
+                    <label for="codaparatos" class="formulario__label"></label>
+                     <div class="formulario__grupo-input">
+                         <input type="text" class="formulario__input" name="codaparatos" id="codaparatos" placeholder="EQUIPOS">
+                         <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                     </div>
+                   <!--   <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p> -->
+                 </div>
+
+                  <!-- Grupo: fechavisitante -->
+                  <div class="formulario__grupo" id="grupo__fechavisitante">
+                   <label for="fechavisitante" class="formulario__label"></label>
+                    <div class="formulario__grupo-input">
+                        <input type="datetime" class="formulario__input" name="fechavisitante" id="fechavisitante" placeholder="FECHA INGRESO">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <!-- <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p> -->
+                </div>
+ 
+                <!-- Grupo: notas -->
+                <div class="formulario__grupo" id="grupo__notas">
+                    <label for="notas" class="formulario__label"></label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="notas" id="notas" placeholder="NOTAS">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <!--<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p> -->
+                </div>
+    
+                <div class="formulario__mensaje" id="formulario__mensaje">
+                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                </div>
+    
+                <div class="formulario__grupo formulario__grupo-btn-enviar">
+                    <button type="submit" class="formulario__btn">Insertar Registro</button>
+                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+                </div>
+
+                <div class="formulario__grupo formulario__grupo-btn-borrar">
+                    <button type="submit" class="formulario__btn">Borrar</button>
+                   <!--  <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p> -->
+                </div>
+            </form>
+        </main>
+
+        <!-- FIN DE Formulario -->
+
+
+        </div>
+
+
+    </header>
+
+    <footer id="#">
+        <div class="contenedor footer-content">
+            <div class="contact-us">
+                <h2 class="brand">ADSI</h2>
+                <p>Sistema Control de Usuarios Visitantes SHOMER-1</p>
+            </div>
+            <!-- Seccion de iconos social media -->
+                <div class="social-media">
+                    <a href="./" class="social-media-icon">
+                        <i class='bx bxl-facebook-circle'></i>
+                    </a>
+                    <a href="./" class="social-media-icon">
+                        <i class='bx bxl-instagram-alt'></i>
+                    </a>
+                    <a href="./" class="social-media-icon">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                </div>
+        </div>
+       <div class="line"></div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <!-- <script src="js/"></script> -->
+    
+</body>
+</html>

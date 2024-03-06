@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Se usa la pseudo clase Root con la propiedad scroll behavior el cual permite controlar el comportamiento del scroll */
+:root{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Declaramos el contenedor el cual separa las secciones de la pagina */
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0;
+}
+
+/* Declaramos los estilos del banner principal*/
+.header{
+    height: 100vh; /*viewport-height) = Altura de la ventana gráfica */
+    background-image: /*linear-gradient(to right, rgba(252, 252, 252, 0.5) 0%, rgba(238, 238, 221, 0.5)100%), */ url(../imagen/shomer1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Declaramos los estilos de los textos del banner inicial */
+.head{
+    text-align: center;
+    padding:0;
+    height: 100%;
+    display: flex; /*para que los textos se Posicionen vertical y horizontal al centro */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+/* se crea la clase burger correspondiente al menu del sistema */
+.burger{
+    position: fixed; /*esta funcion permite que el menu este fijo en toda la pagina al hacer scroll*/
+    /*z-index: 10; este parametro hace que aparezca el menu encima del desplazamiento del menu*/
+    top: 30px;
+    right: 30px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+/* Declaramos los estilos para los enlaces del menu */
+.menu-navegacion{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 22vw;
+    height: 100%;
+    background-image: linear-gradient(135deg, #030f44 0%, #124204 100%);
+    display: flex;
+    flex-direction: column; /*Direcciona los textos del menu*/
+    justify-content: space-evenly; /*Reparte espacio equitativamente dentro del menu*/
+    align-items: center;
+    /* transition: transform .3s ease-in-out; */
+    transform: translate(110%);
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+/* Agregamos una clase que haga que cuando se le da click al boton este aparezca el menu */
+.spread{
+    transform: translate(0);
+}
+
+/* La siguiente clase realiza los cambios en los elementos que estan dentro del menu de navegacion */
+.menu-navegacion a{
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Declaramos los estilos de la etiquete H1 ubicado en el banner principal*/
+.titulo{
+    font-size: 50px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Declaramos los estilos de la etiqueta p ubicado en el banner principal*/
+.copy{
+    font-weight: 300;
+    font-size: 25px;
+}
+
+/* Footer */
+
+footer{
+    background: #fff;; /* #9f8ad0; */
+    padding-bottom: 0.1px; /* Se debe colocar de 0.1px por el colapsado de margenes */
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between; /* Los elementos se ponen uno al lado del otro pero en las esquinas */
+    align-items: center;
+    flex-wrap: wrap; /* Si un elemento ya no entra con esta funcion se desplaza hacia abajo */
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.contact-us{
+    width: 40%;
+    color: #000000; /* #fff; */
+}
+
+.brand{
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.brand+p{
+    font-weight: 500;
+}
+
+.social-media{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-media-icon{
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    color: #124204;
+}
+
+.social-media-icon:hover{
+    /* background: #0000; */
+    color: #f87a13;
+}
+
+.social-media-icon i{
+    font-size: 40px;
+    line-height: 60px;
+}
+
+.line{
+    width:90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 2px;
+    background: #000000;
+    margin-bottom: 60px;
+}
+
+@media screen and (max-width:800px){
+    .menu-navegacion{
+        width:50vw;
+    }
+    .titulo{
+        font-size: 40px;
+    }
+
+    .footer-content{
+        justify-content: center;
+    }
+
+    .social-media{
+        width:80%;
+        justify-content: space-evenly;
+    }
+
+    .social-media i{
+        margin-left: 0;
+    }
+
+    .social-media-icon{
+        margin-left: 0;
+    }
+
+    .contact-us{
+        text-align: center;
+        width:80%;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width:500px){
+    
+    .menu-navegacion{
+        width:65vw;
+    }
+
+    .burger{
+        top: 20px;
+        right: 20px;
+    }
+
+    .titulo{
+        font-size: 30px;
+    }
+
+    .footer-content{
+        justify-content: center;
+    }
+
+    .social-media{
+        width:100%;
+    }
+
+    .social-media i{
+        margin-left: 0;
+    }
+
+    .contact-us{
+        text-align: center;
+        width:90%;
+    }
+}

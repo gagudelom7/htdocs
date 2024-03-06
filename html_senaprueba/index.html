@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practica HTML</title>
+    <link rel="stylesheet" href="estilo/estilo.css" />
+    <script
+      src="https://kit.fontawesome.com/302d1c26eb.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script defer src="js/index.js"></script>
+  </head>
+  <body>
+    
+    <header class="head3r">
+      <nav class="nav3">
+        <!-- <a href="#" class="logo nav-link">Logo</a> -->
+        <a href="#" class="logo nav-link"
+          ><img
+            src="imagenes/shomer.gif"
+            alt="Image"
+            style="width: 80px; height: 80px"
+        /></a>
+
+        <button class="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu">
+          <!-- li.nav-menu-item*4>a.nav-menu-link -->
+          <li class="nav-menu-item">
+            <a href="#" class="nav-menu-link nav-link">Blog</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#" class="nav-menu-link nav-link">Video</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#" class="nav-menu-link nav-link">Nosotros</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#" class="nav-menu-link nav-link nav-menu-link_active"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <br />
+
+    <p id="ima">
+      <img
+        src="imagenes/javamov.gif"
+        alt="imagen no disponible"
+        title="shofar"
+      />Ingeniero de Sistemas
+    </p>
+    <br />
+    <section>
+      <article>
+        <p align="justify" id="parrafo1">
+          En un coche hay tres ingenieros: uno es mecánico, otro electrónico y
+          el último es informático. De repente el coche se para, y el mecánico
+          dice: -Me bajo y le echo un vistazo a ver que pasa. El ingeniero mira
+          el motor, aprieta las tuercas, revisa la gasolina... -Pues yo no he
+          encontrado nada raro, dice. -Espera que me bajo yo a ver si le falla
+          algo eléctrico, dice el segundo. El electrónico mira la conexión entre
+          cables, la batería... -Pues yo me he quedado igual, dice. Y a esto
+          salta el informático: -Oye, ¿qué tal si probamos a bajarnos y a
+          subirnos otra vez?
+        </p>
+      </article>
+      <!-- <article id="vinetas">
+        <p>Lista de Numeros</p>
+        <ol>
+          <li>JAVA</li>
+          <li>PHP</li>
+          <li>PYTHON</li>
+        </ol>
+        <p>Lista de Viñetas</p>
+        <ul>
+          <li>Ingeniero</li>
+          <li>Medico</li>
+          <li>Militar</li>
+        </ul>
+      </article> -->
+      <br />
+
+      <table border="1" style="margin: 0 auto;">
+        <caption id="titcapt">
+          Tabla HTML
+        </caption>
+      
+        <tr>
+          <th>Codigo</th>
+          <th>Nombre</th>
+          <th>Producto</th>
+        </tr>
+        <tr>
+          <td>1010</td>
+          <td>Giovanny</td>
+          <td>Ingeniero</td>
+        </tr>
+
+        <tr>
+          <td>1011</td>
+          <td>Alexander</td>
+          <td>Chef</td>
+        </tr>
+
+        <tr>
+          <td>1012</td>
+          <td>Caleb</td>
+          <td>Siervo</td>
+        </tr>
+
+        <tr>
+          <td id="tdht" colspan="3" align="center">HTML</td>
+        </tr>
+      </table>
+      <br>  
+      <article>
+        <p id="titform">Formulario de Registro</p>
+      </article>
+      <form action="#" method="POST" name="formDatosPersonales">
+        <p>
+          <label>Nombre</label
+          ><input id="nombre" type="text" name="nombre" placeholder="Ingrese nombre" maxlength="8" required/>
+        </p>
+        <p>
+          <label>Contraseña</label
+          ><input id="password" type="password" name="clave" placeholder="Clave Requerida" required/>
+        </p>
+        <p><label>Fecha</label><input id="fecha" type="date" name="fecha" /></p>
+        <p>
+          <label>Telefono</label
+          ><input id="telefono" type="number" name="telefono" step="any" min="10" placeholder="Solo Numeros"/>
+        </p>
+        <br>
+        <p id="lab2"><label>Selec-File</label><input type="file" name="archivo" /></p>
+        <br>
+        <p>
+          <label>Sexo:</label><br />
+          masculino<input id="sexo_0" type="radio" name="hombre" value="hombre"/>
+          Femenino<input id="sexo_1" type="radio" name="mujer" value="mujer" />
+        </p>
+        <br>
+        <p>
+          <label>Opcion:</label>
+
+          <select name="menu" id="selector">
+            <option value="Java">JAVA</option>
+            <option value="Python">PYTHON</option>
+            <option value="php">PHP</option>
+          </select>
+        </p>
+
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Borrar" />
+      </form>
+      <br />
+      <footer id="linkfoot">
+        <a href="http://www.sena.com.co" target="_blank">SENA SOFIA</a>
+        <br />
+        <a href="mailto:gaagudelom@misena.edu.co">correo</a>
+        <br />
+        <a href="archivo/MYSQL EJERCICIOS.txt" download="querys MySQL">Download</a>
+        <br>
+        <p id="pie">ADSI SENA</p>
+        <br>
+      </footer>
+    </section>
+    <footer></footer>
+  </body>
+</html>

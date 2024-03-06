@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Pagina 2</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+        <script>
+            function infoper(){
+                var ipt="<ul>"
+                    +"<li>Nombres: Roger Stevens</li>"
+                    +"<li>Apelldios: Hernandez Ariza</li>"
+                    +"</ul>";
+                $("#contenido").html(ipt);
+                //alert("ok");
+            }
+            //////////////////
+            function estu(){
+                var wd="<h4>Secundario:</h4>Bachiller academico<br>"
+                + "<h4>Universitario:</h4>UPC<br>"
+                +"gjadjadfjhadhasdh";
+
+                $("#contenido").html(wd);
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <img style="width:20%" src="https://static8.depositphotos.com/1004401/908/v/450/depositphotos_9088284-stock-illustration-beauty-girl-face.jpg" alt="">
+            <br>
+            <div class="well container">
+                <button onclick="infoper()"  class="btn btn-warning" >Informacion Personal</button>
+                <button onclick="estu()" class="btn btn-success">Estudios</button>
+                <button class="btn btn-danger">Experiencia Laboral</button>
+                <button class="btn btn-info">Contactos</button>
+            </div>
+        </center>
+        <div id="contenido" name="contenido" class="well container">
+            </div>
+    </body>
+</html>

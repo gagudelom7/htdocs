@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>Ejercicio Prestamo</title>
+<style type="text/css">
+
+#apDiv1 {
+ position: absolute;
+ left: 19px;
+ top: 90px;
+ width: 271px;
+ height: 158px;
+ z-index: 1;
+}
+</style>
+</head>
+<body>
+<div id="apDiv1">
+  <form name="form1" method="post" action="Resultado.php">
+    <table width="330">
+        <tr>
+            <td width="112"><label for="TxtCedula">Cedula Cliente:</label></td>
+            <td width="147"><input type="text" name="TxtCedula" id="TxtCedula"></td>
+          </tr>
+      <tr>
+        <td><label for="TxtNombre">Nombre Cliente:</label></td>
+        <td><input type="text" name="TxtNombre" id="TxtNombre"></td>
+      </tr>
+      <tr>
+        <td width="112"><label for="TxtMontoCredito">Monto de Credito:</label></td>
+        <td width="147"><input type="text" name="TxtMontoCredito" id="TxtMontoCredito"></td>
+      </tr>
+      <tr>
+        <td><label for="TxtTasaInteresMensual">Interes Mensual:</label></td>
+        <td width="147"><select name="TxtTasaInteresMensual">
+          <option value="0.02">0.02</option> 
+        </select></td>
+      </tr>
+
+      <tr>
+        <td><label for="TxtPlazoMeses">Plazo de Meses:</label></td>
+        <td><input type="text" name="TxtPlazoMeses" id="TxtPlazoMeses"></td>
+      </tr>
+      <tr>   
+        
+        <tr>
+          <td><label for="TxtAbonoInteres">Abono Interes:</label></td>
+          <td><input type="text" name="TxtAbonoInteres" id="TxtAbonoInteres"></td>
+        </tr>
+        <tr> 
+
+      <tr>
+        <td colspan="2"><div align="center">
+          <input type="submit" name="BtnEnviar" id="BtnEnviar" value="Enviar">
+        </div></td>
+      </tr>
+    </table>
+  </form>
+</div>
+<p>Tabla de amortizacion de un credito</p>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+*{
+    margin: 0; /*establece margenes externas de un elemento*/
+    padding: 0; /*estalece las margenes internas de un elemento con relacion a los bordes de ese elemento*/
+    box-sizing: border-box; /*trabaja el tema de modelo de cajas para que no se aumenten o disminuyan los tamaños o las proporciones de los elementos al momento de calculares  las dimenciones del mismo*/
+}
+
+/*Cuando es una clase lo invoco la propiedad con un punto (.)*/
+.contenedor{
+    width: 90%; /*la propiedad determina el ancho de la pagina*/
+    background: rgb(175, 170, 100); /*Determina el color del fondo del contenedor*/
+    max-width: 1000px; /*determina el ancho de la pagina*/
+    margin: auto; /*determina el margen de los bordes para centrarlos*/
+
+     /*Los flex box se utilizan en los contenedores que tienen elementos*/
+    display: flex; /*Pociciona flexibilidad a los elementos dentro del contenedor*/
+    flex-direction: row; /*determina la direccion de los elementos dentro del contenedor*/
+    flex-wrap: wrap; /*cuando hay varios elementos y no caben en el ancho de la pagina, desplaza hacia abajo los elementos*/
+}
+
+body{
+    background: #fff;
+}
+
+header{
+    background: rgb(67, 126, 214);
+    width: 100%; /*esta propiedad ocupa el ancho del contenedor*/
+    padding: 20px; /*ubica 20px en todas las direcciones*/
+
+    /*Los flex box se utilizan en los contenedores que tienen elementos*/
+    display: flex; /*Pociciona flexibilidad a los elementos dentro del contenedor - Distribuye o maqueta los elementos*/
+    justify-content: space-between; /*Justifica los elementos hijos dentro del contenedor de left y richt*/
+    align-items: center; /*Centra los elementos verticalmente*/
+    flex-direction: row; /*Coloca los elementos en fila*/
+    flex-wrap: wrap; /*Desplaza los elementos hacia abajo tipo responsive*/
+}
+
+header .logo{
+    color: #fff; /*Color de la letra*/
+    font-size: 30px; /*tamaño de la letra del encabezado*/
+}
+
+header .logo img{
+    width: 80px; /*Ancho de la imagen de la cabezera*/
+    vertical-align: top; /*propiedad para alinear verticalmente la imagen*/
+}
+
+header .logo a{
+    color: #fff; /*Color de la letra*/
+    text-decoration: none; /*Con esta propiedad quitamos el subrayado que tienen los enlaces*/
+    line-height: 80px; /*esta propiedad es para centrar el texto con la misma propiedad del ancho de la imagen*/
+}
+
+header nav{
+    width: 50%; /*Ocupa el 50% delancho del encabezado*/
+
+    /*Los flex box se utilizan en los contenedores que tienen elementos*/
+    display: flex; /*Pociciona flexibilidad a los elementos dentro del contenedor - Distribuye o maqueta los elementos*/
+    flex-wrap: wrap; /*Desplaza los elementos hacia abajo tipo responsive*/
+    align-items: center; /*esta propiedad permite centrar los elementos del menu*/
+}
+
+header nav a{
+    background: #dc143cc7; /*Coloca el color del fondo*/
+    color: #fff; /*Color de la letra*/
+    text-align: center; /*se alinean los elementos dentro del contenedor*/
+    text-decoration: none; /*Con esta propiedad quitamos el subrayado que tienen los enlaces*/
+    padding: 10px; /*establece las margenes del texto seperando las palabras del menu*/
+    flex-grow: 1; /*propiedad de flex box, ocupando el ancho del contenedor*/
+}
+
+header nav a:hover{
+    background: #27db17;
+}
+
+.main{
+    background: #f1e8eac7; /*Coloca el color del fondo*/
+    padding: 20px; /*establece las margenes del texto seperando las palabras del menu*/
+    flex: 1 1 70%; /*Establece la proporcion del ancho de la seccion de forma horizontal en un 70%*/
+    /* width: 70%; */
+}
+
+.main article{
+    margin-bottom: 20px; /*margen inferior de distancia de un elemento con otro elemento*/
+    padding-bottom: 20px; /*margen inferior de distancia del texto con relacion al contenedor*/
+    border-bottom: 1px solid #070707; /*Border de la propiedad article*/
+}
+
+/*Se copia la misma propiedad de clase, pero se le adiciona un valor que establece 
+que la propiedad va hacia el ultimo border incorporado*/
+.main article:nth-last-child(1){
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+aside{
+    background: #e67e22;
+    padding: 20px;
+
+    display: flex;
+    flex: 1 1 30%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+aside .widget{
+  background: #d35400;
+  height: 150px;
+  margin: 10px;
+}
+  /*FOOTER*/
+
+footer{
+    background: #9f8ad0;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 0.1px; /* Se debe colocar de 0.1px por el colapsado de margenes */
+}
+ 
+  .footer-content{
+    display: flex;
+    justify-content: space-between; /* Los elementos se ponen uno al lado del otro pero en las esquinas */
+    align-items: center;
+    flex-wrap: wrap; /* Si un elemento ya no entra con esta funcion se desplaza hacia abajo */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 5%;
+  }
+  
+  .social-media{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .social-media-icon{
+    display: inline-block;
+    /* margin-left: 5px; */
+    margin-right: 35px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .social-media-icon:hover{
+    /* background: #0000; */
+    color: #a87912;
+  }
+  
+  .social-media-icon i{
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  .footer-content .link a{
+    display: flex; /*Pociciona flexibilidad a los elementos dentro del contenedor - Distribuye o maqueta los elementos*/
+    flex-wrap: wrap; /*Desplaza los elementos hacia abajo tipo responsive*/
+    align-items: center;
+    background: #9f8ad0; /*Coloca el color del fondo*/
+    color: #fff; /*Color de la letra*/
+    text-align: center; /*se alinean los elementos dentro del contenedor*/
+    text-decoration: none; /*Con esta propiedad quitamos el subrayado que tienen los enlaces*/
+    padding: 5px; /*establece las margenes del texto seperando las palabras del menu*/
+    flex-grow: 1; 
+  }
+
+  .footer-content .link a:hover{
+  background: #db8017;
+  }
+
+  .footer-content .contact-us h2{ 
+    color: #fff; /*Color de la letra*/
+  }
+
+  .footer-content .contact-us p{ 
+    color: #fff; /*Color de la letra*/
+  }

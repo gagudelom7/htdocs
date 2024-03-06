@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Ejercicio Automoviles</title>
+<style type="text/css">
+
+#apDiv1 {
+ position: absolute;
+ left: 19px;
+ top: 90px;
+ width: 271px;
+ height: 158px;
+ z-index: 1;
+}
+</style>
+</head>
+<body>
+<div id="apDiv1">
+  <form name="form1" method="post" action="Resultado.php">
+    <table width="700">
+      <tr>
+        <td><label for="TxtNombre">Nombre del Vendedor:</label></td>
+        <td><input type="text" name="TxtNombre" id="TxtNombre"></td>
+      </tr>
+      <tr>
+        <td width="112"><label for="TxtCantidad">Cantidad Automoviles Vendidos:</label></td>
+        <td width="147"><input type="text" name="TxtCantidad" id="TxtCantidad"></td>
+      </tr>
+      <tr>
+        <td><label for="TxtPrecioTotal">Precio Total Automoviles Vendidos:</label></td>
+        <td><input type="text" name="TxtPrecioTotal" id="TxtPrecioTotal"></td>
+      </tr>
+      
+        <td colspan="2"><div align="center"><br>
+          <input type="submit" name="BtnEnviar" id="BtnEnviar" value="Enviar">
+        </div></td>
+      </tr>
+    </table>
+  </form>
+</div>
+<br>
+<p>VENDEDOR AUTOMOVILES</p>
+</body>
+</html>

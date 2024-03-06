@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="js/ejerciciojs.js"></script>
+  </head>
+  <body>
+    <h1>Curso JavaScript</h1>
+    <script>
+      // var hola="Hola Ing :)"
+      // let hello="KIkiriki"
+      // console.log(hola)
+      // console.log(hello)
+      // console.log(window)
+      //ambitos de bloque
+
+      // console.log("*************** VAR ****************")
+
+      // var musica="pop"
+      // console.log("La variable ANES del bloque", musica)
+      // {
+      //     var musica="rancheras"
+      //     console.log("La variable DENTRO del bloque", musica)
+      // }
+      // console.log("La variable FUERA del bloque", musica)
+
+      // console.log("*************** LET ****************")
+
+      // let musica2="Alabanza"
+      // console.log("La variable ANTES del bloque en Let", musica2)
+      // {
+      //     let musica2="Suave"
+      //     console.log("La variable DENTRO del bloque en Let", musica2)
+      // }
+
+      // console.log("La variable FUERA del bloque en Let", musica2)
+
+      // const persona={
+      //     nombre:"Jonas",
+      //     edad:23
+      // }
+
+      // const colores=["Blanco","Azul","Amarillo"];
+
+      // console.log(colores)
+      // console.log(persona)
+
+      // persona.email="gagudelom@zehut.com.co";
+      // persona.celular=3105777011
+
+      // colores.push=("Rojo");
+      // colores.push=("Naranja");
+
+      // console.log(colores)
+      // console.log(persona)
+
+/* ************************************************************************************************** */
+
+// VIDEO 7 Concatenacion
+      //       let nombre = "Giovanny";
+      //       let apellido = "Agudelo";
+
+      //       // ALT + 96 Backtick
+      //       let salu2 = `Hola mi nombre es ${nombre} ${apellido}`;
+
+      //       console.log(salu2);
+
+      //       let ul2 = `<ul>
+      //     <li>Primavera</li>
+      //     <li>verano</li>
+      //     <li>otoño</li>
+      //     <li>Invierno</li>
+      //     <li>Calientico</li>
+      // </ul>`;
+
+      // console.log(ul2)
+
+      // VIDEO 8  NUmeros JS
+
+      // let a=5;
+      // let b= new Number(7);
+      // let c=7.25;
+      // let d="3.25"
+
+      // console.log(a+b)
+      // console.log(c.toFixed(1))
+      // console.log(parseInt(c))
+      // console.log(c+parseInt(d))
+      // console.log(c+parseFloat(d))
+
+/* ************************************************************************************************** */
+
+//VIDEO 9 UNDEFINED NULL AND NaN
+
+      // Undefined indica que la variable no se ha inicializado y que
+      // el valor esta ausente
+
+      // let indefinida;
+      // console.log(indefinida)
+
+      // // Null es un valor especial que indicar la ausencia de un valor
+
+      // let nulo=null;
+      // console.log(nulo)
+
+      // // NaN: Not a Number
+
+      // let noEsNumero="hola"*3.7;
+      // console.log(noEsNumero)
+
+/* ************************************************************************************************** */
+  
+// VIDEO 10 Declarar una Funcion
+
+      // function unaFuncionQueDdevuelveValor(){
+      //     console.log("Uno1");
+      //      return=19;  /*aca se corta el codigo impidiendo seguir la compilacion*/
+      //     console.log("Dos2");
+      //     console.log("Tres3");
+      //     return"La funcion retorna una cadena de texto";
+      // }
+
+      // let valorFuncion = unaFuncionQueDdevuelveValor();
+
+      // console.log(valorFuncion)
+
+      // function saludar(nomb,edad){
+      //     console.log(`Hi, My name is ${nomb} y tengo ${edad} años`);
+      // }
+
+      //     saludar("Gio",39)
+
+      // // Funciones Declaradas vs Funciones Expresadas
+
+      // funcionDeclarada();
+
+      // function funcionDeclarada(){
+      //     console.log("Esto es una funcion Declarada, la cual puede invocarse desde"
+      //     +"cualquier parte de nuestro codigo, incluso antes de que la funcion este declarada");
+      // }
+
+      // // Funcion Anonima
+
+      // //funcionExpresada();
+
+      // const funcionExpresada=function(){
+      //     console.log("una funcion expresada es una funcion que se le ha asignado un valor a una variable"+
+      //     "si invocamos esta funcion antes de su definicio JS mostrara un error de consola diciendo..."+
+      //     "ReferenceError: can't access lexical declaration 'funcionExpresada' before initialization")
+      // }
+
+      // funcionExpresada();
+
+      // VIDEO 11 ARRAYS es una coleccion de elementos de diferente tipo
+
+      // const a=[1, true, "Hola",["A","b","W"]]
+
+      // console.log(a)
+      // console.log(a[3][1])
+
+      // const colores=["Red","Green","Blue"];
+      // colores.push("Black")
+
+      // console.log(colores);
+
+      // colores.forEach(function (el,i){
+      //     console.log(`<li id="${i}">${el}</li>`)
+      // });
+
+/* ************************************************************************************************** */
+    
+// VIDEO 12 OBJETOS el cual es una coleccion de llave, valor
+
+      // const gio={
+      //     nombre:"Gio",
+      //     apellido:"Agudelo",
+      //     edad:39,
+      //     hovies:["run","Developer","read Holy Bible"],
+      //     soltero:false,
+      //     contacto:{
+      //         email:"gagudelom@zehut.com.co",
+      //         movil:31057777011,
+      //         twitter:"@gagudelom"
+      //     },
+      //     saludar:function(){
+      //         console.log("Hola :)")
+      //     },
+
+      //     decirMiNombre:function(){
+      //         console.log(`Hola Me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años
+      //         y me puedes seguir en ${this.contacto.twitter} en twitter`)
+      //     }
+      // }
+
+      // gio.saludar();
+      // gio.decirMiNombre();
+
+      // console.log(Object.keys(gio))
+
+/* ************************************************************************************************** */
+
+// VIDEO 14 CONDICIONALES IF ELSE
+
+      // let ed=39;
+
+      // if(ed>=18){
+      //   console.log("Tienes Cedula");
+      // }else{
+      //   console.log("no tienes cedula")
+      // }
+
+      // // CONDICIONAES SWITCH
+
+      // let day=6;
+
+      // switch(day){
+
+      //   case 0:
+      //     console.log("Domingo");
+      //     break;
+
+      //   case 1:
+      //     console.log("Lunes");
+      //     break;
+
+      //   case 2:
+      //     console.log("Martes");
+      //     break
+
+      //   case 3:
+      //     console.log("Miercoles");
+      //     break;
+
+      //   case 4:
+      //     console.log("Jueves");
+      //     break;
+
+      //   case 5:
+      //     console.log("Viernes");
+      //     break;
+
+      //   case 6:
+      //     console.log("Shabat");
+      //     break;
+
+      //     default:
+      //       console.log("Numero Incorrecto");
+      //       break;
+
+      // }
+
+      // // CONDICIONALES IF DE UNA SOLO LINEA
+
+      /* let edad=20;
+
+          let info=(edad>=18)?"Eres Mayor":"Eres menor";
+          console.log(info) */
+
+      /*  VIDEO 15 CICLOS LOOPS
+
+          CICLO FOR */
+
+      /*  let num=[10,20,30,50,80,77];
+            
+          for(let i=0; i<num.length;i++){
+              console.log("los numeros son: " + num[i])
+          } */
+
+      //ESTRUCUTRA FOR IN
+
+      /*     const gio={
+            nombre:"Gio",
+            profesion:"Ing",
+            edad:39
+          }
+
+          for(const propiedad in gio){
+            console.log(`la propiedad es:${propiedad}, EL valor es:${gio[propiedad]}`);
+          } */
+
+      /*   let texto="Hola Ing"
+
+          for(const iterracion of texto){
+            console.log(iterracion)
+          } */
+
+/* ************************************************************************************************** */
+
+// VIDEO 16 MANEJO DE ERRORES TRY CATH
+
+      /*     try {
+            
+            let num="k";
+
+            if(isNaN(num)){
+              
+              throw new Error("el dato no es un numero");
+
+            }
+
+            console.log(num*5);
+
+          } catch (error) {
+
+            console.log(`Se produjo el error 812: ${error}`);
+
+          } */
+
+/* ************************************************************************************************** */
+      
+// VIDEO 17 BREAK Y continue
+
+      /* num=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27];
+
+          for (let i=0;i<num.length;i++){
+
+            if(i%2){
+              continue;
+
+            }
+
+            console.log(`el numero par es: ${num[i]}`);
+
+          } */
+
+ /* ************************************************************************************************** */
+
+/*  // VIDEO 18 DESTRUCTURACION asigna valores a objetos y arreglos
+
+          // Sin Destructuracion
+
+          let num=[1,2,3,4,5];
+
+          let uno=num[0],
+              dos=num[1],
+              tres=num[2],
+              cuatro=num[3];
+              console.log(uno,dos,tres,cuatro);
+
+          // Con Destructuracion
+
+          const [one, two, three, four]=num;
+
+            console.log(one,two,three,four);
+
+
+            let person={
+              nombre:"Gio",
+              apellido:"Agudelo",
+              movil:3105777011,
+              email:"gagudelom@zehut.com.co",
+              profesion:"Ing"
+            }
+
+            let{nombre,apellido,movil,email,profesion}=person;
+
+              console.log(nombre,apellido,profesion,movil,email); */
+
+   /* ************************************************************************************************** */
+   
+  /*   // VIDEO 19 OBJETOS LITERALES 
+            
+              let nombre="Hagguen",
+                edad=7;
+
+                let perro={
+                  nombre:nombre,
+                  edad:edad,
+                  ladrar:function(){
+                    console.log("guauu guauu!");
+                  }
+                }
+
+                console.log(perro);
+                perro.ladrar();
+
+                // APLICANDO LA ESTANDARIZACION DE ECMA6
+
+                const dog={
+                  nombre,
+                  edad,
+                  ladrar(){
+                    console.log("guauu guauu guauu");
+                  }
+                }
+
+                console.log(dog);
+                dog.ladrar(); */
+
+  /* ************************************************************************************************** */
+
+  /*  // VIDEO 20 PARAMETROS REST & OPERADOR SPREAD
+
+                function sumar(a,b, ...c){
+                  let resultado = a+b;
+
+                  c.forEach(function(n){
+
+                    resultado += n;
+                  });
+
+                  return resultado;
+                }
+
+                console.log(sumar(1,2));
+                console.log(sumar(1,2,3));
+                console.log(sumar(1,2,3,4));
+                console.log(sumar(1,2,3,4,5));
+                console.log(sumar(1,2,3,4,5,6));
+                console.log(sumar(1,2,3,4,5,6,7));
+
+
+                // Operadores Spread
+
+                const arr1=[1,2,3,4,5],
+                arr2=[6,7,8,9,0];
+                
+                console.log(arr1,arr2)
+                
+                const arr3=[...arr1, ...arr2];
+                
+                console.log(arr3) */
+
+/* ************************************************************************************************** */
+
+ // VIDEO 21 ARROW FUNCTIONS
+
+ /*      // Ejemplo1
+      const saludar = function () {
+        console.log("HOla Ing");
+      }
+
+      saludar();
+
+      // Ejemplo2
+
+      const saludar1 = () => console.log("Hola Ingeniero");
+      saludar1();
+
+      // Ejemplo3
+
+      const saludar3 = (nombre) => console.log(`Hola Ing ${nombre}`);
+
+      saludar3("Gio");
+
+      // Ejemplo4
+
+      const saludar4 = (profesion) =>
+        console.log(`Giovanny, tu eres un gran ${profesion}`);
+      saludar4("Ingeniero");
+
+      // Ejemplo5 con Return
+
+      const sumar = function (a, b) {
+        return a + b;
+      }
+
+      console.log(sumar(8, 9));
+
+      // Ejemplo6 sin Return
+
+      const sumar1 = (a, c) => a + c;
+
+      console.log(sumar1(7, 7));
+
+      // Ejemplo7 arrow function de varias lineas
+
+      const funcionVariasLineas = () => {
+        console.log("abc"), console.log("def");
+        console.log("ghi");
+      }
+      funcionVariasLineas();
+
+      // Ejemplo8 Array de validacion
+
+      const numeros = [1, 2, 3, 4, 5, 6, 7];
+
+      numeros.forEach(function (el, i) {
+        console.log(`${el}, se posiciona en ${i}`);
+      });
+
+      // Ejemplo9 transformado a una arrow function
+
+      const number = [7, 8, 9, 4, 5, 6];
+
+      number.forEach((el, i) => {
+        console.log(`el ${el}, esta en ${i}`);
+      });
+
+      // Ejemplo10 de una sola linea
+
+      const textt = ["a", "v", "e", "G", "p", "w"];
+
+      textt.forEach((el, i) => console.log(`La letra ${el}, esta en ${i}`));
+
+      // Ejemplo11 Declaracion de un Objeto con una funcion interna con parametro THIS 
+      // Prohibido Arrow function ya que pasa al DOM el parametro THIS
+
+      const perro={
+        nombre:"Hagguen",
+        edad:7,
+        ladrar:function(){
+          console.log(this)
+        }
+      }
+
+      perro.ladrar();
+
+      // Ejemplo12 Simplifacado
+
+      const doggy={
+        nombre:"Snoop",
+        edad:5,
+        ladrar(){
+          console.log(this);
+        }
+      }
+
+      doggy.ladrar(); */
+
+/* ************************************************************************************************** */
+
+// VIDEO 22 PROTOTIPOS
+
+      /* 
+      POO
+      Clases - El cual es un Modelo a seguir
+      Objetos - son una instancia de una clase
+      Atributos - son una caracteristica o propiedad de un objeto (Son Variables dentro de un Objeto)
+      Metodos - son las acciones que un objeto puede realizar (son funciones dentro de un objeto)
+       */
+
+       /* // Funcion Constructora I - DOnde los metodos son independientes del prototipo
+
+       function Animal(nombre,genero){
+        // Atributos
+        this.nombre=nombre,
+        this.genero=genero,
+
+        // Metodos
+        this.sonar = function(){
+          console.log("el animal hace sonidos")
+        }
+
+        // Metodos II
+
+        this.saludar=function(){
+          console.log(`HOlA Me LlAmO ${this.nombre}`)
+        }
+
+       } */
+
+     /*   // Funcion Constructora II donde asignamos los metodos al prototipo
+
+       function Animal(nombre,genero){
+        // Atributos
+        this.nombre=nombre;
+        this.genero=genero;
+
+      }
+
+      // Metodos agregados al prototipo de la funcion constructora
+      Animal.prototype.sonar = function(){
+        console.log("el animal hace sonidos")
+      }
+
+      Animal.prototype.saludar=function(){
+        console.log(`HOlA Me LlAmO ${this.nombre}`)
+      }
+      
+      const snoopy = new Animal("Snoopy","Macho"),
+        lolaBunny = new Animal("Lola Bunny","Hembra");
+
+
+        console.log(snoopy);
+        console.log(lolaBunny);
+
+        snoopy.saludar();
+        lolaBunny.saludar(); */
+
+/* ************************************************************************************************** */
+
+// VIDEO 23 HERENCIA PROTOTIPICA - EL poder Herdar caracteristicas de un padre a un hijo
+
+       /*  function Animal(nombre, genero){
+          this.nombre=nombre;
+          this.genero=genero;
+        }
+
+        Animal.prototype.comer= function(){
+          console.log(`El ${this.nombre} Come`);
+        }
+
+        Animal.prototype.observa= function(){
+          console.log(` ${this.nombre} Observa`);
+        }
+
+        // PASO QUE ESTABLECE LA HERENCIA PROTOTIPICA
+
+        function perro(nombre,genero,raza){
+          this.super=Animal;
+          this.super(nombre,genero);
+          this.raza=raza;
+        }
+
+        // INSTANCIA DE PERRO SOBRE EL OBJETO O CLASE ANIMAL
+
+        perro.prototype = new Animal();
+        perro.prototype.constructor = perro;
+
+        // SOBRE ESCRITURA DE METODOS DE PROTOTIPO PADRE EN EL HIJO
+
+        perro.prototype.moverse= function(){
+          console.log(`EL ${this.nombre} se desplaza`);
+        }
+
+        perro.prototype.ladrar= function(){
+          console.log(`El Perro ladra por que es de raza: ${this.raza}`);
+        }
+
+        perro.prototype.definicion= function(){
+          console.log(`El genero del perro es ${this.genero}`);
+        }
+
+        const dog= new perro("Kilate","macho","rottweiller");
+        const doggy= new perro("cata","hembra","fila brasilero"); 
+
+
+        console.log(dog);
+        console.log(doggy);
+
+        dog.comer();
+        doggy.comer();
+        doggy.observa();
+        dog.moverse();
+        doggy.ladrar();
+        doggy.definicion(); */
+
+        /* ************************************************************************************************** */
+
+// Video 24 CLases y Herencias
+// Las clases no reciben parametros, los parametros son recibidos por el metodo constructor
+
+
+        /* class Animal{
+
+          //El constructor es un metodo especial que se ejecuta en el momento de instanciar
+          //la clase, o de crear objetos de este tipo
+          
+          constructor(nombre, genero){
+            this.nombre=nombre;
+            this.genero=genero;
+          }
+          //Metodos
+
+          desplazar(){
+            console.log(`${this.nombre} se desplaza`);
+          }
+          
+          comer(){
+            console.log(`${this.nombre} come`);
+          }
+
+        }
+          
+        //Herencia de Clases
+
+        class Perro extends Animal{
+          constructor(nombre,genero,raza){
+         
+            //El metodo Super() manda a llamar el constructor de la clase padre con sus respectivos paramtros
+            
+            super(nombre,genero);
+            this.raza=raza;
+          }
+
+          //Sobre escritura de Metodos
+
+          desplazar(){
+            console.log(`EL perro ${this.nombre} se desplaza corriendo`)
+          }
+
+          ladrar(){
+            console.log(`EL perro de raza ${this.raza} Ladra`)
+          }
+        }
+
+
+        //Creamos las instancias o generamos las variables para invocar los metodos
+        const beagle=new Perro("Tobyto","Macho","Beagle");
+        const silvestre=new Animal("Lola Bunny","Hembra");
+
+        console.log(beagle);
+        beagle.desplazar();
+        beagle.comer();
+        beagle.ladrar();
+        console.log(silvestre);
+        silvestre.desplazar();
+        silvestre.comer(); */
+
+ /* ************************************************************************************************** */
+
+// Video 25 Metodos estaticos y Getters and Setters
+// Un Metodo estatico es aquel que se puede ejecutar sin necesidad de instanciar la clase
+// EL Metodo Static debe estar dentro de la clase
+
+class Animal{
+  constructor(nombre, genero){
+    this.nombre=nombre;
+    this.genero=genero;
+  }
+
+  //Metodos
+
+  desplazar(){
+            console.log(`${this.nombre} se desplaza`);
+          }
+
+  moverse(){
+    console.log("el animal se mueve");
+  }
+
+  comer(){
+    console.log("ell animal come");
+  }
+  
+}
+
+   //Herencia de Clases
+
+class Perro extends Animal{
+  constructor(nombre,genero,tamanio){
+    super(nombre,genero);
+    this.tamanio=tamanio;
+
+    // Se define un nuevo atributo y se iguala a NULL para obtener
+    this.raza=null;
+  }
+
+  moverse(){
+    console.log("el Perro se mueve");
+  }
+
+  
+  // Metodo STATIC
+
+  static rascar(){
+    console.log("el perro se rasca");
+  }
+
+  // Metodos Getter es un metodo obtenedor
+
+  get getRaza(){
+    return this.raza;
+  }
+
+  // Metodo Setter es un metodo establecedor el cual modifica el valor de la propiedad obtenida por el Getter
+
+  set setRaza(raza){
+    this.raza=raza;
+  }
+
+}
+
+//para invocar un metodo estatico no se requiere que instanciarlo
+
+Perro.rascar();
+
+const perrito=new Animal("Hagen","Macho"),
+      perrita=new Perro("Laica","Hembra","mediana");
+
+
+      console.log(perrito);
+      console.log(perrita);
+      perrito.comer();
+      perrita.moverse();
+// Establecemos y Obtenemos los datos para mostrarlos en los metodos Setter and Getters
+
+perrita.setRaza="Coker Spanish";
+
+console.log(perrita.getRaza);
+
+
+
+    </script>
+  </body>
+</html>

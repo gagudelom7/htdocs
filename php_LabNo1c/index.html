@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Ejercicio Control de Peso</title>
+<style type="text/css">
+
+#apDiv1 {
+ position: absolute;
+ left: 19px;
+ top: 90px;
+ width: 271px;
+ height: 158px;
+ z-index: 1;
+}
+</style>
+</head>
+<body>
+<div id="apDiv1">
+  <form name="form1" method="post" action="Resultado.php">
+    <table width="700">
+      <tr>
+        <td><label for="TxtNombre">Nombre del Paciente:</label></td>
+        <td><input type="text" name="TxtNombre" id="TxtNombre"></td>
+      </tr>
+      <tr>
+        <td width="112"><label for="TxtPeso">Peso en Kilos:</label></td>
+        <td width="147"><input type="text" name="TxtPeso" id="TxtPeso"></td>
+      </tr>
+      <tr>
+        <td><label for="TxtEstaturaMetros">Estatura en Metros:</label></td>
+        <td><input type="text" name="TxtEstaturaMetros" id="TxtEstaturaMetros"></td>
+      </tr>
+      
+        <td colspan="2"><div align="center"><br>
+          <input type="submit" name="BtnEnviar" id="BtnEnviar" value="Enviar">
+        </div></td>
+      </tr>
+    </table>
+  </form>
+</div>
+<br>
+<p>Formulario Quetelet</p>
+</body>
+</html>
